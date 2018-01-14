@@ -7,11 +7,23 @@
   </head>
   <body>
     <div class="full">&nbsp;</div>
-    <a class="image"><img src="logo.png"></a>
+    <div class="text"><div class="inner">inner</div></div>
+    <img src="logo.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
-      $('a.image').click(function() {
-        $
+      $(document).ready(function() {
+        $('.text').fadeOut(0);
+      });
+      var lenth = 100;
+      $('.full').click(function() {
+        if($('.full').css('opacity') == 0) {
+          $('.full').animate({opacity: 0.8},lenth);
+          $('.text').fadeIn(lenth);
+        }
+        if($('.full').css('opacity') != 0) {
+          $('.full').animate({opacity: 0.0},lenth);
+          $('.text').fadeOut(lenth);
+        }
       });
     </script>
   </body>
