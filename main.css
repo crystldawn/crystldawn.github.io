@@ -48,5 +48,9 @@ div.text {
   align-items: center;
 }
 div.inner {
-
+  font-size: 60px;
+}
+div.inner a {
+  padding: 20px;
+  display: inline-block;
 }
